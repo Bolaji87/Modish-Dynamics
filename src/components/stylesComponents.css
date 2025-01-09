@@ -1,0 +1,146 @@
+/* stylesComponents.css */
+
+/* Navbar container styling */
+.navbar-container {
+  margin: 0 50px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.5rem;
+
+  color: rgb(71, 21, 21);
+
+  background-color: #fff; /* Or your navbar background color */
+
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  scroll-behavior: smooth;
+}
+
+.logo {
+  /* Customize logo styling if needed */
+  width: 100px;
+  height: auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  margin: 0 1.5rem;
+}
+
+.navbar-link {
+  text-decoration: none;
+
+  color: rgb(71, 21, 21);
+  font-size: 1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #ff7f50; /* Change color on hover */
+}
+
+.login {
+  display: flex;
+  width: 100px;
+  justify-content: space-between;
+}
+
+.hamburger-menu {
+  /* display: none; */
+  font-size: 2rem;
+  cursor: pointer;
+  color: rgb(71, 21, 21);
+}
+
+.hero-cont {
+  background-color: rgb(235, 234, 234);
+}
+.hero-content {
+  margin: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero-image-cont {
+}
+.hero-img {
+  width: 500px;
+  height: 500px;
+  object-fit: fill;
+  border-radius: 3px;
+}
+.hero-tagline {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  gap: 30px;
+  width: 600px;
+}
+.hero-tagline h2 {
+  line-height: 1.6;
+  color: rgb(153, 50, 50);
+  font-size: 22px;
+}
+.hero-tagline h1 {
+  color: rgb(153, 50, 50);
+  font-size: 30px;
+}
+.hero-tagline p {
+  width: 408px;
+  color: rgb(71, 21, 21);
+}
+.hero-btn {
+  background-color: rgb(85, 8, 8);
+  color: rgb(222, 222, 222);
+  width: 150px;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+}
+/* Mobile responsiveness: Show hamburger menu on smaller screens */
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none; /* Hide menu links */
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+
+  .navbar-container {
+    padding: 1rem;
+  }
+
+  .navbar-menu.show {
+    display: flex;
+  }
+
+  .navbar-item {
+    margin: 1rem 0;
+  }
+
+  .hamburger-menu {
+    display: block; /* Show hamburger menu icon */
+  }
+}
