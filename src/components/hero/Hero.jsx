@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "./Button";
-import "./stylesComponents.css";
+import Button from "../Button";
+import "./hero.css";
 const Hero = ({ children }) => {
   return (
     <div className="hero-cont">
@@ -18,10 +18,6 @@ const Hero = ({ children }) => {
             cupiditate, accusamus culpa quod deleniti totam delectus?
           </p>
           <button className="hero-btn">Shop now &rarr;</button>
-        </div>
-
-        <div className="hero-image-cont">
-          <img className="hero-img" src="/m-hero.jpg" alt="hero-image" />
         </div>
       </div>
     </div>
