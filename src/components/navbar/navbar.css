@@ -38,7 +38,7 @@
   text-decoration: none;
 
   color: rgb(71, 21, 21);
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: bold;
   transition: color 0.3s ease;
 }
@@ -52,4 +52,8 @@
   font-size: 2rem;
   cursor: pointer;
   color: rgb(71, 21, 21);
+}
+.shop-cart {
+  font-size: inherit;
+  font-weight: 800;
 }
