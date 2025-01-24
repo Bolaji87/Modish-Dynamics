@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { PiShoppingCartThin } from "react-icons/pi";
+import { FaHome } from "react-icons/fa";
+import { FaShoppingBag } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
 
 import "./navbar.css"; // Importing the styles
 import Logo from "../logo/Logo";
-import Login from "../login/Login";
 import { useCart } from "../../contexts/CartContext";
+import SideNav from "../side-nav/SideNav";
 
 const Navbar = () => {
   const { numberOfItems } = useCart();
@@ -18,18 +21,18 @@ const Navbar = () => {
           <ul className="navbar-menu">
             <li className="navbar-item">
               <Link to={"/"} className="navbar-link">
-                Home
+                <FaHome />
               </Link>
             </li>
             <li className="navbar-item">
               <Link to="/products" className="navbar-link">
-                Products
+                <FaShoppingBag />
               </Link>
             </li>
             <li className="navbar-item">
-              <a href="/about" className="navbar-link">
-                About us
-              </a>
+              <Link to="/about" className="navbar-link">
+                <FaUser />
+              </Link>
             </li>
             <li className="navbar-item">
               <a href="/cart" className="navbar-link">
@@ -39,8 +42,7 @@ const Navbar = () => {
             </li>
           </ul>
         </nav>
-
-        <Login />
+        <SideNav />
       </div>
     </div>
   );

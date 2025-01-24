@@ -4,29 +4,31 @@ const CartContext = createContext();
 
 const initialCartState = {
   totalAmount: 0,
-  numberOfItems: 0,
+  // numberOfItems: 0,
   cartItems: [],
 };
 
 const CartProvider = ({ children }) => {
-  const [cartItems, setCartItems] = useState(() => {
+  const [cartItems, setCartItems] = useState(
     // Load from localStorage on initialization
-    const savedCart = window.localStorage.getItem("cartItems");
-    return savedCart ? JSON.parse(savedCart) : initialCartState;
-  });
-  const cartItemsCount = cartItems.numberOfItems;
+    // const savedCart = window.localStorage.getItem("cartItems");
+    // return savedCart ? JSON.parse(savedCart) : initialCartState;
+    initialCartState
+  );
 
-  useEffect(() => {
-    window.localStorage.setItem("cartItems", JSON.stringify(cartItems));
-  }, [cartItems]);
+  // useEffect(() => {
+  //   window.localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  // }, [cartItems]);
+
+  const numberOfItems = cartItems.cartItems.length;
 
   return (
     <CartContext.Provider
       value={{
         cartItems: cartItems.cartItems,
         totalAmount: cartItems.totalAmount,
-        numberOfItems: cartItems.numberOfItems,
-        cartItemsCount,
+        numberOfItems,
+        // cartItemsCount,
         setCartItems,
       }}
     >

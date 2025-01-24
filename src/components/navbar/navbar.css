@@ -47,12 +47,6 @@
   color: #ff7f50; /* Change color on hover */
 }
 
-.hamburger-menu {
-  /* display: none; */
-  font-size: 2rem;
-  cursor: pointer;
-  color: rgb(71, 21, 21);
-}
 .shop-cart {
   font-size: inherit;
   font-weight: 800;

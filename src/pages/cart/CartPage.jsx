@@ -10,6 +10,10 @@ const CartSummary = () => {
 const CartPage = () => {
   const { cartItems, setCartItems } = useCart();
 
+  const handleDeleteItem = (id) => {
+    setCartItems((cartItems) => cartItems.filter((cur) => cur.id !== id));
+  };
+
   return (
     <div className="cart-page">
       {cartItems.length > 0 ? (
