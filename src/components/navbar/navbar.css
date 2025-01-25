@@ -38,16 +38,24 @@
   text-decoration: none;
 
   color: rgb(71, 21, 21);
+  color: #ff7f50;
   font-size: 1.3rem;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .navbar-link:hover {
-  color: #ff7f50; /* Change color on hover */
+  color: rgb(71, 21, 21); /* Change color on hover */
 }
 
 .shop-cart {
-  font-size: inherit;
+  font-size: 22px;
   font-weight: 800;
+  position: relative;
+}
+.num-item {
+  position: absolute;
+  font-size: 13px;
+  top: 14px;
+  color: rgb(71, 21, 21);
 }

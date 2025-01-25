@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { PiShoppingCartThin } from "react-icons/pi";
 import { FaHome } from "react-icons/fa";
 import { FaShoppingBag } from "react-icons/fa";
+import { BsCart } from "react-icons/bs";
 import { FaUser } from "react-icons/fa";
 
 import "./navbar.css"; // Importing the styles
@@ -36,8 +37,8 @@ const Navbar = () => {
             </li>
             <li className="navbar-item">
               <a href="/cart" className="navbar-link">
-                <span>{numberOfItems}</span>
-                <PiShoppingCartThin className="shop-cart" />
+                <span className="num-item">{numberOfItems}</span>
+                <BsCart className="shop-cart" />
               </a>
             </li>
           </ul>
