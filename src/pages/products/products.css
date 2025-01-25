@@ -1,25 +1,28 @@
-/* .products-container {
+.products {
+  background-color: #f7f7f7;
+  padding-top: 50px;
+  width: 100vw;
+  height: 100vh;
 }
-
-.products-cont {
+.products ul {
+  margin: 0 15px;
+  padding: 1rem 0.5rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 5px; 
-
-  padding: 5px 10px;
-} */
-/* products.css */
-
-.products-cont {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
-  gap: 16px; /* Space between cards */
-  padding: 20px;
+  column-gap: 10px;
+  row-gap: 50px;
+  list-style-type: none;
 }
+.error {
+  width: 100vw;
+  height: 100vh;
 
-/* .products-cont > * {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-} */
+}
+.error h2 {
+  font-size: 26px;
+  font-weight: bolder;
+  color: rgb(214, 30, 30);
+}
