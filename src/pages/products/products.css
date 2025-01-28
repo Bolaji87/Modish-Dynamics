@@ -1,6 +1,0 @@
-.products-cont {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px; /* Adds space between grid items */
-  padding: 20px;
-}

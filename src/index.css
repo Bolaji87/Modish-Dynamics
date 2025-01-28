@@ -1,20 +1,47 @@
-* {
-  padding: 0;
+/* Reset margin and padding for all elements */
+*,
+*::before,
+*::after {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+/* Set a consistent font family across all elements */
 body {
-  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
 }
 
-.btn {
-  width: 80px;
+/* Remove text decoration on links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-  background-color: #fff;
-  color: rgb(85, 8, 8);
-  font-size: 18px;
-  text-transform: capitalize;
-  border-radius: 6px;
-  border: 1px solid rgb(85, 8, 8);
+/* Reset list styles */
+ul, ol {
+  list-style: none;
+}
+
+/* Reset table borders and spacing */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Remove focus outlines for buttons and links (can be replaced with custom focus styles) */
+button, input, textarea, select {
+  outline: none;
+}
+
+/* Basic block element styling */
+h1, h2, h3, h4, h5, h6, p {
+  margin-bottom: 1rem;
 }
