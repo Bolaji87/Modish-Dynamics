@@ -1,7 +1,12 @@
 import React from "react";
+import Navbar from "./components/mainheader/Navbar";
 
 function App() {
-  return <div>Modish Dynamics</div>;
+  return (
+    <div className="app">
+      <Navbar />
+    </div>
+  );
 }
 
 export default App;

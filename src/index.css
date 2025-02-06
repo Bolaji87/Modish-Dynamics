@@ -20,7 +20,8 @@ a {
 }
 
 /* Reset list styles */
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -37,11 +38,23 @@ img {
 }
 
 /* Remove focus outlines for buttons and links (can be replaced with custom focus styles) */
-button, input, textarea, select {
+button,
+input,
+textarea,
+select {
   outline: none;
 }
 
 /* Basic block element styling */
-h1, h2, h3, h4, h5, h6, p {
-  margin-bottom: 1rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: 1.3rem;
+}
+.app {
+  height: 100vh;
 }
