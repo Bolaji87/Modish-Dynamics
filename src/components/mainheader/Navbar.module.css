@@ -1,71 +1,31 @@
-.main-header {
+.header {
   width: 100vw;
-  background-color: rgb(240, 240, 214);
-  background-color: rgb(204, 189, 189);
-  padding: 10px 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.main-header h2 {
-  align-self: center;
-  color: rebeccapurple;
-}
-.main-nav {
-  /* width: 350px; */
-}
-.main-nav ul {
+  background-color: #f7f7f7;
+  padding: 10px 45px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.header h1 {
+  color: rgb(4, 82, 82);
+}
+.header nav ul {
+  display: flex;
   gap: 20px;
-  /* align-items: center; */
 }
-.main-nav li {
-  font-size: 1.3rem;
-  color: rgb(161, 98, 224);
+.header nav li {
+  color: rgb(26, 88, 88);
+  text-transform: capitalize;
+  padding: 8px;
 }
-.side-nav {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-}
-.last-nav {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-size: 1.3rem;
-}
-.nav-login {
-  /*border: 1px solid rgb(161, 98, 224);
-  */
-  color: rebeccapurple;
-  border: 1px solid rgb(161, 98, 224);
+.header nav li:hover {
+  color: rgb(228, 240, 240);
+  text-transform: capitalize;
+  background-color: rgb(26, 88, 88);
+  padding: 8px;
   border-radius: 8px;
-  width: 70px;
-  text-align: center;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
-}
-.toggle-dark-mode {
-  font-size: 1.4rem;
-}
-.header-search {
-  width: 200px;
-}
-.header-search input {
-  width: 200px;
-  padding: 8px;
-  border: none;
-  border-radius: 8px;
-  outline: none;
-  color: red;
-  font-size: 19px;
-}
-.header-search input:focus {
-  background-color: lightblue;
-  border: 1px solid grey;
-  border-color: #93b2d3;
-  box-shadow: 0 0 8px rgba(109, 118, 131, 0.5);
 }

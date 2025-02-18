@@ -1,47 +1,28 @@
 import React from "react";
-import { MdOutlineDarkMode } from "react-icons/md";
-import { GiShoppingCart } from "react-icons/gi";
-import { FaUser } from "react-icons/fa";
-import { FaHome } from "react-icons/fa";
-
+import { CgDarkMode } from "react-icons/cg";
 import styles from "./Navbar.module.css";
 
 function Navbar() {
   return (
-    <header className={styles["main-header"]}>
-      <h2>Modish dynamic XX</h2>
-      <nav className={styles["main-nav"]}>
+    <header className={styles.header}>
+      <h1>Modish D</h1>
+      <nav>
         <ul>
           <li>
-            <a href="">
-              <FaHome />
-            </a>
+            <a href="#">Home</a>
           </li>
           <li>
-            <a>Products</a>
+            <a href="#">About</a>
           </li>
           <li>
-            <a>
-              <FaUser />
-            </a>
+            <a href="#">Products</a>
           </li>
           <li>
-            <a>
-              <GiShoppingCart />
-            </a>
+            <a href="#">cart</a>
           </li>
         </ul>
       </nav>
-
-      <div className={styles["side-nav"]}>
-        <form action="" className={styles["header-search"]}>
-          <input type="search" className={styles.input} />
-        </form>
-        <nav className={styles["last-nav"]}>
-          <div className={styles["nav-login"]}>login</div>
-          <MdOutlineDarkMode className={styles["toggle-dark-mode"]} />
-        </nav>
-      </div>
+      <CgDarkMode />
     </header>
   );
 }
