@@ -7,7 +7,7 @@ export const appRoute = [
     component: Home,
   },
   {
-    path: "/product",
+    path: "/products",
     component: Products,
   },
 ];
