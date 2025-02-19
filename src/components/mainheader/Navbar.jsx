@@ -1,5 +1,7 @@
 import React from "react";
 import { CgDarkMode } from "react-icons/cg";
+import { Link } from "react-router-dom";
+
 import styles from "./Navbar.module.css";
 
 function Navbar() {
@@ -9,16 +11,16 @@ function Navbar() {
       <nav>
         <ul>
           <li>
-            <a href="#">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="#">About</a>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <a href="#">Products</a>
+            <Link to="/products">Products</Link>
           </li>
           <li>
-            <a href="#">cart</a>
+            <Link to="cart">cart</Link>
           </li>
         </ul>
       </nav>
