@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 
-function Error({ message }) {
-  return <div>{message}</div>;
+function Error({ errorMessage }) {
+  return <div>{errorMessage}</div>;
 }
 
 export default Error;
