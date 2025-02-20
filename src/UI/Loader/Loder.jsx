@@ -1,7 +1,7 @@
 import React from "react";
 
-function Loder() {
-  return <div>Loading...</div>;
+function Loder({ message }) {
+  return <div>{message}</div>;
 }
 
 export default Loder;
