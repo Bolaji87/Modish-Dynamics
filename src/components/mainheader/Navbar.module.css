@@ -9,7 +9,7 @@
 .header h1 {
   color: rgb(4, 82, 82);
 }
-.header nav ul {
+.navList {
   display: flex;
   gap: 20px;
 }
@@ -17,8 +17,9 @@
   color: rgb(26, 88, 88);
   text-transform: capitalize;
   padding: 8px;
+  cursor: pointer;
 }
-.header nav li:hover {
+/* .header nav li:hover {
   color: rgb(228, 240, 240);
   text-transform: capitalize;
   background-color: rgb(26, 88, 88);
@@ -28,4 +29,19 @@
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
+} */
+
+.cartLiChild {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: bolder;
+}
+.numItems {
+  position: absolute;
+  top: -18px;
+  left: 0;
+}
+.cartIcon {
+  font-size: bolder;
 }
