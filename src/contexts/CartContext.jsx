@@ -1,15 +1,47 @@
-import { createContext, useContext, useState } from "react";
+/* eslint-disable react/prop-types */
+import { createContext, useContext, useReducer } from "react";
 
 const CartContext = createContext();
 
-const cartItems = {
+const initialState = {
   totalAmount: 0,
   numItems: 0,
   cart: [],
 };
 
+function reducer(state, action) {
+  switch (action.type) {
+    case "addItem": {
+      const updatedCart = [...state.cart, action.payload];
+      return {
+        ...state,
+        cart: updatedCart,
+        numItems: updatedCart.length,
+        totalAmount: updatedCart.reduce((acc, item) => acc + item.price, 0),
+      };
+    }
+    case "deleteItem": {
+      const updatedCart = state.cart.filter(
+        (item) => item.id !== action.payload
+      );
+      return {
+        ...state,
+        cart: updatedCart,
+        numItems: updatedCart.length,
+        totalAmount: updatedCart.reduce((acc, item) => acc + item.price, 0),
+      };
+    }
+
+    default:
+      throw new Error("unkwown action type");
+  }
+}
+
 function CartProvider({ children }) {
-  const [{ totalAmount, cart, numItems }, setCartItems] = useState(cartItems);
+  const [{ totalAmount, cart, numItems }, dispatch] = useReducer(
+    reducer,
+    initialState
+  );
 
   function handleAddItemTocart({
     title,
@@ -19,30 +51,14 @@ function CartProvider({ children }) {
     description,
     id,
   }) {
-    setCartItems((prev) => {
-      const updatedCart = [
-        ...prev.cart,
-        { title, image, price, category, description, id },
-      ];
-      return {
-        ...prev,
-        cart: updatedCart,
-        numItems: updatedCart.length,
-        totalAmount: updatedCart.reduce((sum, item) => sum + item.price, 0),
-      };
+    dispatch({
+      type: "addItem",
+      payload: { title, image, price, category, description, id },
     });
   }
 
   function handleDeleteCartItem(id) {
-    setCartItems((prev) => {
-      const updatedCart = prev.cart.filter((item) => item.id !== id);
-      return {
-        ...prev,
-        cart: updatedCart,
-        numItems: updatedCart.length,
-        totalAmount: updatedCart.reduce((sum, item) => sum + item.price, 0),
-      };
-    });
+    dispatch({ type: "deleteItem", payload: id });
   }
   return (
     <CartContext.Provider
@@ -50,7 +66,7 @@ function CartProvider({ children }) {
         totalAmount,
         numItems,
         cart,
-        setCartItems,
+        dispatch,
         onDeleteItem: handleDeleteCartItem,
         onAddItemToCart: handleAddItemTocart,
       }}
