@@ -23,7 +23,7 @@ function Cart() {
         )}
       </ul>
 
-      <p>$ {Math.round(totalAmount) || ""}</p>
+      <p>$ {totalAmount.toFixed(2) || ""}</p>
     </div>
   );
 }
