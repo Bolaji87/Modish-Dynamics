@@ -3,7 +3,7 @@ import { CgDarkMode } from "react-icons/cg";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
 
-import { useCart } from "../../contexts/CartContext";
+import { useCart } from "../contexts/CartContext";
 
 function Navbar() {
   const { numItems } = useCart();
