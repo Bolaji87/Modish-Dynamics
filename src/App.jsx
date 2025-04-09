@@ -5,7 +5,7 @@ import { appRoute } from "./UI/routes";
 
 function App() {
   return (
-    <div className="app">
+    <div>
       <Navbar />
 
       <Routes>

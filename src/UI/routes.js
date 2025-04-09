@@ -1,6 +1,6 @@
-import Home from "../pages/Home/Home";
-import Products from "../pages/product/Products";
-import Cart from "../pages/cart/Cart";
+import Home from "../pages/Home";
+import Products from "../pages/Products";
+import Cart from "../pages/Cart";
 
 export const appRoute = [
   {
