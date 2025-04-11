@@ -1,28 +1,33 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { getProducts } from "../../services/storeApi";
+import { useLoaderData } from "react-router-dom";
+import ProductCard from "./ProductCard";
 
 function Products() {
-  const [products, setProducts] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState("");
+  const products = useLoaderData();
 
-  useEffect(function () {
-    async function fetchProducts() {
-      try {
-        setIsLoading(true);
-        setError("");
-        const response = await fetch(`${BASE_URL}/products`);
-        if (!response.ok) throw new Error("Error fetching products");
-        const data = await response.json();
-        setProducts(data);
-        setIsLoading(false);
-      } catch (err) {
-        setError(err.message);
-        setIsLoading(false);
-      }
-    }
-    fetchProducts();
-  }, []);
-  return <div>Products</div>;
+  return (
+    <div>
+      <div className="text-md flex justify-center gap-3 bg-gray-400 py-3 font-semibold">
+        <p>All</p>
+        <p>Men's clothing</p>
+        <p>Women's clothing</p>
+        <p>Jewelery</p>
+        <p>electronics</p>
+      </div>
+      <div className="flex justify-center">
+        <ul className="grid grid-cols-3 gap-3 px-8 py-6">
+          {products?.map((product) => (
+            <ProductCard product={product} key={product.id} />
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
 }
 
+export async function loader() {
+  const products = await getProducts();
+  return products;
+}
 export default Products;
