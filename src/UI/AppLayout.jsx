@@ -1,12 +1,17 @@
 import React from "react";
 import Navbar from "./Navbar";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigation } from "react-router-dom";
+import Loader from "./Loader";
 
 function AppLayout() {
+  const navigation = useNavigation();
+  const isLoading = navigation.state === "loading";
+
   return (
-    <div>
+    <div className="mx-6 h-screen px-6">
+      {isLoading && <Loader />}
       <Navbar />
-      <main>
+      <main className="bg-slate-200">
         <Outlet />
       </main>
     </div>
