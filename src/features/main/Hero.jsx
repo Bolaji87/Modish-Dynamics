@@ -2,7 +2,7 @@ import React from "react";
 
 function Hero() {
   return (
-    <section className="flex h-full items-center gap-6 px-5 py-4 sm:gap-28">
+    <section className="flex h-full items-center gap-6 bg-gray-50 px-5 py-4 sm:gap-28">
       <div className="sm:mt-15 space-y-6 pl-10 sm:pt-12 sm:text-xl sm:font-medium">
         <p className="">
           Welcome to Modish Dynamics, welcome to <br />
