@@ -8,15 +8,15 @@ function Navbar() {
   const navigate = useNavigate();
 
   return (
-    <header className="flex items-center justify-between bg-sky-600 px-4 py-3 text-sm font-medium uppercase text-stone-900 sm:px-6 sm:font-semibold">
+    <header className="flex items-center justify-between bg-gray-100 px-8 py-3 text-sm font-medium uppercase text-stone-900 sm:font-semibold">
       <Link to="/" className="capitalize italic sm:text-xl">
         Modish D
       </Link>
       <nav className="flex items-center gap-1 sm:gap-3">
-        <Link>Home</Link>
-        <Link>Products</Link>
-        <Link>About</Link>
-        <Link>Cart</Link>
+        <Link to="/">Home</Link>
+        <Link to="/products">Products</Link>
+        <Link to="/about">About</Link>
+        <Link to="/cart">Cart</Link>
       </nav>
     </header>
   );
