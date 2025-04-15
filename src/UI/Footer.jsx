@@ -1,7 +1,15 @@
 import React from "react";
 
 function Footer() {
-  return <footer>Modish D &copy; </footer>;
+  const today = new Date();
+  console.log(today);
+  return (
+    <footer className="flex items-center justify-center bg-slate-100 px-4 py-5">
+      <div>
+        <p>Modish D &copy; {today.getFullYear()}</p>
+      </div>
+    </footer>
+  );
 }
 
 export default Footer;
