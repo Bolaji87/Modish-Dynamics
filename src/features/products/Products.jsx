@@ -5,6 +5,7 @@ import ProductCard from "./ProductCard";
 
 function Products() {
   const products = useLoaderData();
+  console.log(products);
 
   return (
     <div>
