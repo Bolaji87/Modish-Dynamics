@@ -5,11 +5,11 @@ import { addCartItem } from "../cart/cartSlice";
 
 function ProductCard({ product }) {
   const dispatch = useDispatch();
-  const { title, image, price, category, id, description } = product;
+  const { title: name, image, price, category, id, description } = product;
 
   function handleAddToCart() {
     const newItem = {
-      title,
+      title: name,
       image,
       price,
       id,
@@ -21,20 +21,16 @@ function ProductCard({ product }) {
   }
 
   return (
-    <li className="flex w-80 max-w-[800px] flex-col items-center gap-1 rounded-xl bg-white p-6 shadow-custom transition-shadow duration-300 hover:shadow-lg">
-      <img src={image} alt={title} className="h-72 w-64 object-fill" />
-      <div>
-        <p>{title}</p>
-        <div className="mt-3 flex items-center justify-center text-lg font-medium sm:gap-4">
-          <p>{price}</p>
-          <button
-            onClick={handleAddToCart}
-            className="rounded-xl bg-blue-600 px-5 py-2"
-          >
-            Add to cart
-          </button>
-        </div>
+    <li className="flex w-52 flex-col items-center justify-center bg-gray-50 px-5 py-10 shadow-md">
+      <p className="py-3 text-sm font-medium">{name}</p>
+      <div className="h-40 w-32 overflow-hidden">
+        <img
+          className="h-full w-full object-cover object-center"
+          src={image}
+          alt={name}
+        />
       </div>
+      <button>Add to cart</button>
     </li>
   );
 }

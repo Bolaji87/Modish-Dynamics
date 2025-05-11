@@ -1,21 +1,19 @@
 import React from "react";
-import Navbar from "./Navbar";
-import { Outlet, useNavigation } from "react-router-dom";
-import Loader from "./Loader";
+import { Outlet } from "react-router-dom";
+
+import Header from "./Header";
 import Footer from "./Footer";
 
 function AppLayout() {
-  const navigation = useNavigation();
-  const isLoading = navigation.state === "loading";
-
   return (
     <div className="h-screen">
-      {isLoading && <Loader />}
-      <Navbar />
-      <main className="mx-4 px-4">
+      <Header />
+      {/* <main className="overflow-auto"> */}
+
+      <main className="">
         <Outlet />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
