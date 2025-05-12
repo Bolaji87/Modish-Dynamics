@@ -13,8 +13,11 @@ function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 flex items-center justify-between bg-gray-50 px-8 py-3 text-sm font-medium text-stone-500 shadow-md sm:font-semibold">
-      <Link to="/" className="capitalize italic sm:text-xl">
+    <header className="sticky top-0 z-50 flex items-center justify-between bg-gray-50 px-8 py-3 text-sm font-medium text-stone-700 shadow-md sm:font-semibold">
+      <Link
+        to="/"
+        className="p-0 capitalize italic text-orange-600 sm:text-2xl"
+      >
         D Modish
       </Link>
       <nav className="flex items-center gap-1 sm:gap-3">

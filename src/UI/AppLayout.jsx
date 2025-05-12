@@ -6,14 +6,12 @@ import Footer from "./Footer";
 
 function AppLayout() {
   return (
-    <div className="h-screen">
+    <div className="flex min-h-screen flex-col">
       <Header />
-      {/* <main className="overflow-auto"> */}
-
-      <main className="">
+      <main className="flex-grow">
         <Outlet />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

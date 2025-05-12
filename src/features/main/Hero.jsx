@@ -10,7 +10,7 @@ function Hero() {
       }}
     >
       <div className="flex items-center justify-between px-20 py-12">
-        <div className="sm:mt-15 space-y-6 pl-10 sm:pt-12 sm:text-xl sm:font-medium">
+        <div className="sm:mt-15 space-y-6 text-stone-700 sm:pt-12 sm:text-xl sm:font-medium">
           <p className="">
             Welcome to Modish Dynamics, welcome to <br />
             our wall of modest fashion where style meets sophistication.
