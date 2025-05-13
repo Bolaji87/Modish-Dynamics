@@ -13,10 +13,10 @@ function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 flex items-center justify-between bg-gray-50 px-8 py-3 text-sm font-medium text-stone-700 shadow-md sm:font-semibold">
+    <header className="sticky top-0 z-50 flex items-center justify-between gap-5 bg-gray-50 px-8 py-3 text-sm font-medium text-stone-700 shadow-md sm:font-semibold">
       <Link
         to="/"
-        className="p-0 capitalize italic text-orange-600 sm:text-2xl"
+        className="p-0 text-sm capitalize italic text-orange-600 sm:text-2xl"
       >
         D Modish
       </Link>
@@ -46,7 +46,7 @@ function Header() {
           Cart
         </Link>
         <Link
-          className="rounded-md bg-yellow-600 px-5 py-2 text-gray-50"
+          className="rounded-md bg-yellow-600 px-3 py-2 text-gray-50 sm:px-5"
           to="/sign-in"
         >
           Sign In

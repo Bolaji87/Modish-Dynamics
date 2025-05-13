@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const latestProducts = [
   {
@@ -25,12 +26,12 @@ const latestProducts = [
 
 function LatestProducts() {
   return (
-    <div className="min-h-screen bg-gray-50 pt-6">
+    <div className="bg-gray-0 min-h-screen pt-6">
       <div className="px-20 py-10">
         <h1 className="mb-10 text-3xl font-bold capitalize text-yellow-600">
           Latest products
         </h1>
-        <ul className="grid h-[500px] grid-cols-4 gap-4">
+        <ul className="grid min-h-[500px] place-content-center gap-4 gap-y-9 sm:grid-cols-4">
           {latestProducts.map((latest) => (
             <Latest key={latest.id} item={latest} />
           ))}
@@ -41,14 +42,13 @@ function LatestProducts() {
 }
 
 function Latest({ item }) {
-  const [isShow, setIsShow] = useState(false);
+  const navigate = useNavigate();
 
   const { name, image, id } = item;
   return (
     <li
-      onMouseEnter={() => setIsShow(true)}
-      onMouseLeave={() => setIsShow(false)}
-      className="relative w-fit items-center rounded-lg bg-gray-50 px-6 py-3 shadow-lg"
+      onClick={() => navigate("/products")}
+      className="relative w-fit cursor-pointer items-center rounded-lg px-6 py-3 duration-300 hover:scale-105"
     >
       <div className="relative flex flex-col items-center gap-2">
         <p className="absolute left-3 top-2 text-xl font-bold capitalize italic text-orange-50">
@@ -61,11 +61,6 @@ function Latest({ item }) {
             className="rounded-md object-cover object-center"
           />
         </div>
-        {isShow && (
-          <button className="absolute left-14 top-52 z-50 w-52 rounded-xl bg-yellow-600 px-6 py-4 text-xl font-medium capitalize text-gray-50">
-            Shop now
-          </button>
-        )}
       </div>
     </li>
   );
