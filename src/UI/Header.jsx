@@ -18,9 +18,9 @@ function Header() {
         to="/"
         className="p-0 text-sm capitalize italic text-orange-600 sm:text-2xl"
       >
-        D Modish
+        Modish styles
       </Link>
-      <nav className="flex items-center gap-1 sm:gap-3">
+      <nav className="flex items-center justify-between gap-2 sm:gap-3">
         <Link
           className={`border-b-2 py-2 transition-all duration-300 ease-in-out ${pathMatchRoute("/") ? "border-b-yellow-600" : "border-b-transparent"}`}
           to="/"
@@ -46,7 +46,7 @@ function Header() {
           Cart
         </Link>
         <Link
-          className="rounded-md bg-yellow-600 px-3 py-2 text-gray-50 sm:px-5"
+          className="w-max rounded-md bg-yellow-600 px-3 py-2 text-gray-50 sm:px-6 sm:text-lg"
           to="/sign-in"
         >
           Sign In
