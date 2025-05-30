@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const latestProducts = [
   {
-    name: "colored tent fabrics ",
+    name: "Colored tent fabrics",
     id: "2198645379",
     image: "./fullblue-abaya.jpg",
   },
@@ -13,12 +13,12 @@ const latestProducts = [
     image: "./men-whitejalab.jpg",
   },
   {
-    name: "palette of soft fabric",
+    name: "Palette of soft fabric",
     id: "2300005813",
     image: "/carton-color-abaya.jpg",
   },
   {
-    name: " fabrics with a pantone ",
+    name: "Fabrics with a Pantone",
     id: "2320518005",
     image: "/men-jalab-thick-brown.jpg",
   },
@@ -26,43 +26,42 @@ const latestProducts = [
 
 function LatestProducts() {
   return (
-    <div className="bg-gray-0 min-h-screen pt-6">
-      <div className="px-20 py-10">
-        <h1 className="mb-10 text-3xl font-bold capitalize text-indigo-600">
-          Latest products
+    <section className="min-h-screen bg-gray-50 py-10">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-8 md:px-12 lg:px-20">
+        <h1 className="mb-10 text-center text-3xl font-bold capitalize text-indigo-600">
+          Latest Products
         </h1>
-        <ul className="min-h-[500px grid w-full max-w-6xl grid-cols-1 place-content-center gap-y-6 bg-gray-50 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <ul className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {latestProducts.map((latest) => (
             <Latest key={latest.id} item={latest} />
           ))}
         </ul>
       </div>
-    </div>
+    </section>
   );
 }
 
 function Latest({ item }) {
   const navigate = useNavigate();
+  const { name, image } = item;
 
-  const { name, image, id } = item;
   return (
     <li
       onClick={() => navigate("/products")}
-      className="relative w-full cursor-pointer items-center rounded-lg px-6 py-3 duration-300 hover:scale-105"
+      className="transform cursor-pointer rounded-lg bg-white p-3 shadow-md transition duration-300 hover:scale-105"
     >
-      <div className="relative flex flex-col items-center gap-2">
-        <p className="absolute left-3 top-2 text-xl font-bold capitalize italic text-stone-900">
+      <div className="relative mb-4 h-64 w-full overflow-hidden rounded-md">
+        <img
+          src={image}
+          alt={name}
+          className="h-full w-full object-cover object-center"
+        />
+        <p className="absolute left-3 top-3 max-w-[90%] rounded bg-white/70 px-2 py-1 text-sm font-semibold italic text-stone-900 backdrop-blur-sm sm:text-base">
           {name}
         </p>
-        <div className="h-96 max-w-[320px]">
-          <img
-            src={image}
-            alt={name}
-            className="h-full rounded-md object-cover object-center"
-          />
-        </div>
       </div>
     </li>
   );
 }
+
 export default LatestProducts;

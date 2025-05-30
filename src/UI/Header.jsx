@@ -18,10 +18,11 @@ function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 flex w-full items-center justify-between gap-5 bg-gray-50 px-8 py-3 text-sm font-medium text-stone-700 shadow-md sm:font-semibold">
+    <header className="max-7xl sticky top-0 z-50 flex w-full items-center justify-between gap-5 bg-gray-50 px-8 py-3 text-sm font-medium text-stone-700 shadow-md sm:font-semibold">
       <Link
         to="/"
-        className="p-0 text-sm capitalize text-indigo-600 sm:text-xl"
+        // className="p-0 text-sm capitalize text-indigo-600 sm:text-xl"
+        className="max-w-[150px] truncate text-base capitalize text-indigo-600 sm:text-xl md:text-2xl"
       >
         Modish styles
       </Link>
@@ -55,7 +56,7 @@ function Header() {
         </Link>
 
         <Button
-          className='className="w-max sm:text-lg" rounded-md bg-indigo-600 px-3 py-1.5 text-gray-50 sm:px-6'
+          className="w-max rounded-md bg-indigo-600 px-4 py-2 text-sm text-white transition hover:bg-indigo-700 sm:px-6 sm:text-base"
           to="/sign-in"
         >
           Sign In
