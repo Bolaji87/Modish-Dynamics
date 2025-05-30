@@ -4,24 +4,21 @@ import Button from "../../UI/Button";
 
 function Hero() {
   return (
-    <section
-      className="min-h-[80vh] bg-cover bg-center bg-no-repeat"
-      style={{
-        backgroundImage:
-          "url('ssshttps://www.shutterstock.com/shutterstock/photos/1759277513/display_1500/stock-photo-rolls-of-fabric-and-textiles-in-a-factory-shop-multi-different-colors-and-patterns-on-the-market-1759277513.jpg')",
-      }}
-    >
-      <div className="flex flex-col items-center justify-between gap-4 px-20 py-12 sm:flex-row">
-        <div className="sm:mt-15 space-y-6 text-sm font-medium text-stone-700 sm:pt-12 sm:text-xl sm:font-medium">
+    <section className="min-h-[80vh] bg-cover bg-center bg-no-repeat">
+      <div className="flex flex-col items-center justify-center gap-4 px-20 py-12 sm:flex-row sm:justify-between">
+        <div className="sm:mt-15 flex flex-col gap-5 space-y-6 text-sm font-medium text-stone-700 sm:pt-12 sm:text-xl sm:font-medium">
           <p className="">
             Welcome to {BRAND_NAME}, welcome to <br />
             our wall of where Modesty meets Modernity..
           </p>
 
-          <h1 className="my-12 text-lg font-semibold sm:text-3xl">
+          <h1 className="my-12 text-start text-lg font-semibold sm:text-center sm:text-3xl">
             Discover Quality Fabrics
           </h1>
-          <Button className='sm:inline-block" mt-8 rounded-md border bg-indigo-600 px-8 py-3 text-xl font-semibold capitalize text-stone-50 transition-all duration-300 ease-in-out hover:scale-110 hover:bg-indigo-700 hover:text-stone-100'>
+          <Button
+            to="/products"
+            className="mt-8 inline-block w-fit self-center rounded-md border bg-indigo-600 px-8 py-3 text-xl font-semibold capitalize text-stone-50 transition-all duration-300 ease-in-out hover:scale-110 hover:bg-indigo-700 hover:text-stone-100 sm:self-start"
+          >
             shop now
           </Button>
         </div>
