@@ -20,11 +20,10 @@ function ProductCard({ product }) {
     };
 
     dispatch(addCartItem(newItem));
-    console.log(newItem);
   }
 
   return (
-    <li className="flex h-[400px] flex-col rounded bg-gray-100 py-2 pt-0">
+    <li className="flex h-[400px] flex-col rounded-md bg-gray-100 py-2 pt-0">
       <div className="h-[80%] w-64 flex-1">
         <img
           className="h-full w-full object-cover object-center"
