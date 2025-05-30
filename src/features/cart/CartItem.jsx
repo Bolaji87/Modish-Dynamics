@@ -1,54 +1,36 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import UpdateCartQuantity from "./UpdateCartQuantity";
 
-// function CartItem({ item }) {
-//   const { title, image, id, price, description } = item;
-
-//   return (
-//     <li className="max-w[1100px] flex w-[900px] items-center gap-10 rounded-3xl bg-slate-100">
-//       <img
-//         className="h-52 w-48 max-w-56 rounded-3xl bg-inherit bg-cover object-cover"
-//         src={image}
-//         alt={title}
-//       />
-//       <div className="flex flex-col justify-between gap-7">
-//         <h3>{title}</h3>
-//         <p>{description}</p>
-//         <div>
-//           <p>{price}</p>
-//         </div>
-//       </div>
-//     </li>
-//   );
-// }
-
-// export default CartItem;
-/* eslint-disable react/prop-types */
-
-function CartItem({ item }) {
-  const { title, image, id, price, description } = item;
+export default function CartItem({ item }) {
+  const { image, description, title: name, price, quantity } = item;
 
   return (
-    <li className="flex w-full max-w-[1100px] flex-col items-center gap-4 rounded-3xl bg-slate-100 p-4 sm:flex-row sm:gap-10">
-      <div className="flex h-52 w-full items-center justify-center rounded-2xl bg-slate-200 sm:w-48">
+    <li className="flex flex-col overflow-hidden rounded-lg bg-white shadow-md md:flex-row">
+      <div className="w-full md:w-1/2">
         <img
-          className="h-full max-h-52 w-full object-contain object-center sm:object-cover"
+          className="h-48 w-full object-cover object-top md:h-full"
           src={image}
-          alt={title}
+          alt={name}
         />
       </div>
-
-      <div className="flex w-full flex-col justify-between gap-3">
-        <h3 className="text-base font-semibold sm:text-lg">{title}</h3>
-        <p className="line-clamp-3 text-sm text-gray-600">{description}</p>
-        <div className="flex items-center justify-between">
-          <p className="text-base font-medium">${price}</p>
-          <UpdateCartQuantity />
+      <div className="flex w-full flex-col justify-between bg-gray-50 p-4 md:w-1/2">
+        <div className="space-y-1">
+          <h3 className="text-lg font-semibold">{name}</h3>
+          <p className="text-sm text-gray-600">{description}</p>
+          <p className="text-md font-bold text-gray-800">${price}</p>
+        </div>
+        <div className="mt-4 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <button className="h-8 w-8 rounded bg-gray-200 font-bold hover:bg-gray-300">
+              -
+            </button>
+            <span className="text-md font-medium">{quantity}</span>
+            <button className="h-8 w-8 rounded bg-gray-200 font-bold hover:bg-gray-300">
+              +
+            </button>
+          </div>
         </div>
       </div>
     </li>
   );
 }
-
-export default CartItem;

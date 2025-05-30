@@ -28,7 +28,7 @@ function LatestProducts() {
   return (
     <div className="bg-gray-0 min-h-screen pt-6">
       <div className="px-20 py-10">
-        <h1 className="mb-10 text-3xl font-bold capitalize text-yellow-600">
+        <h1 className="mb-10 text-3xl font-bold capitalize text-indigo-600">
           Latest products
         </h1>
         <ul className="min-h-[500px grid w-full max-w-6xl grid-cols-1 place-content-center gap-y-6 bg-gray-50 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -51,7 +51,7 @@ function Latest({ item }) {
       className="relative w-full cursor-pointer items-center rounded-lg px-6 py-3 duration-300 hover:scale-105"
     >
       <div className="relative flex flex-col items-center gap-2">
-        <p className="absolute left-3 top-2 text-xl font-bold capitalize italic text-stone-50">
+        <p className="absolute left-3 top-2 text-xl font-bold capitalize italic text-stone-900">
           {name}
         </p>
         <div className="h-96 max-w-[320px]">

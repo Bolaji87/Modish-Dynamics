@@ -16,12 +16,14 @@ function ProductsData() {
   return (
     <>
       <div className="flex justify-center gap-4">
-        <div>All</div>
+        {/* <div>All</div>
         <div>Abaya</div>
-        <div>Jalab</div>
+        <div>Jalab</div> */}
+
+        {/* <FilterCategories /> */}
       </div>
       <div className="flex min-h-screen items-center justify-center">
-        <ul className="grid w-full max-w-6xl grid-cols-1 justify-items-center px-10 py-10 sm:grid-cols-2 sm:gap-x-0 sm:gap-y-4 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
+        <ul className="grid w-full max-w-7xl grid-cols-1 justify-items-center px-10 py-10 sm:grid-cols-2 sm:gap-x-0 sm:gap-y-4 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

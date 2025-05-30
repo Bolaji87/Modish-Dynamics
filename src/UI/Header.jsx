@@ -1,8 +1,13 @@
 import React from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import Button from "./Button";
+import { useSelector } from "react-redux";
+import { selectCartCount } from "../features/cart/cartSlice";
+import { HiShoppingCart } from "react-icons/hi2";
 
 function Header() {
   const location = useLocation();
+  const totalItems = useSelector(selectCartCount);
 
   function pathMatchRoute(path) {
     if (location.pathname === path) {
@@ -13,44 +18,48 @@ function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 flex items-center justify-between gap-5 bg-gray-50 px-8 py-3 text-sm font-medium text-stone-700 shadow-md sm:font-semibold">
+    <header className="sticky top-0 z-50 flex w-full items-center justify-between gap-5 bg-gray-50 px-8 py-3 text-sm font-medium text-stone-700 shadow-md sm:font-semibold">
       <Link
         to="/"
-        className="p-0 text-sm capitalize italic text-orange-600 sm:text-2xl"
+        className="p-0 text-sm capitalize text-indigo-600 sm:text-xl"
       >
         Modish styles
       </Link>
       <nav className="flex items-center justify-between gap-2 sm:gap-3">
         <Link
-          className={`border-b-2 py-2 transition-all duration-300 ease-in-out ${pathMatchRoute("/") ? "border-b-yellow-600" : "border-b-transparent"}`}
+          className={`border-b-2 py-2 transition-all duration-300 ease-in-out ${pathMatchRoute("/") ? "border-b-indigo-600" : "border-b-transparent"}`}
           to="/"
         >
           Home
         </Link>
         <Link
-          className={`border-b-2 py-2 transition-all duration-300 ease-in-out ${pathMatchRoute("/products") ? "border-b-yellow-600" : "border-b-transparent"}`}
+          className={`border-b-2 py-2 transition-all duration-300 ease-in-out ${pathMatchRoute("/products") ? "border-b-indigo-600" : "border-b-transparent"}`}
           to="/products"
         >
           Products
         </Link>
         <Link
-          className={`border-b-2 py-2 transition-all duration-300 ease-in-out ${pathMatchRoute("/about") ? "border-b-yellow-600" : "border-b-transparent"}`}
+          className={`border-b-2 py-2 transition-all duration-300 ease-in-out ${pathMatchRoute("/about") ? "border-b-indigo-600" : "border-b-transparent"}`}
           to="/about"
         >
           About
         </Link>
         <Link
-          className={`border-b-2 py-2 transition-all duration-300 ease-in-out ${pathMatchRoute("/cart") ? "border-b-yellow-600" : "border-b-transparent"}`}
+          className={`relative border-b-2 py-2 transition-all duration-300 ease-in-out ${pathMatchRoute("/cart") ? "border-b-indigo-600" : "border-b-transparent"}`}
           to="/cart"
         >
-          Cart
+          <span className="text-500-300 absolute left-[-1px] top-[-12px] rounded-full bg-pink-300 px-[3px] text-[14px] font-semibold">
+            {totalItems || ""}
+          </span>
+          {totalItems ? <HiShoppingCart /> : "Cart"}
         </Link>
-        <Link
-          className="w-max rounded-md bg-yellow-600 px-3 py-2 text-gray-50 sm:px-6 sm:text-lg"
+
+        <Button
+          className='className="w-max sm:text-lg" rounded-md bg-indigo-600 px-3 py-1.5 text-gray-50 sm:px-6'
           to="/sign-in"
         >
           Sign In
-        </Link>
+        </Button>
       </nav>
     </header>
   );
