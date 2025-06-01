@@ -41,7 +41,7 @@ function Header() {
         <ToggleDarkMode />
 
         <div className="absolute right-[-20px] top-[58px]">
-          {toggleShowMenu && <NavModal />}
+          {toggleShowMenu && <NavModal closeModal={onToggleShow} />}
         </div>
       </nav>
     </header>
