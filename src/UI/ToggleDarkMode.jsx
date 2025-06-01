@@ -18,7 +18,7 @@ function ToggleDarkMode() {
             exit={{ opacity: 0, rotate: 90 }}
             transition={{ duration: 0.2 }}
           >
-            <HiOutlineSun />
+            <HiOutlineSun className="text-indigo-600" />
           </motion.span>
         ) : (
           <motion.span
@@ -28,7 +28,7 @@ function ToggleDarkMode() {
             exit={{ opacity: 0, rotate: 90 }}
             transition={{ duration: 0.2 }}
           >
-            <HiOutlineMoon />
+            <HiOutlineMoon className="text-indigo-600" />
           </motion.span>
         )}
       </AnimatePresence>

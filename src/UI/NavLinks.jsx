@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { useLocation, useNavigate } from "react-router-dom";
 import { selectCartCount } from "../features/cart/cartSlice";
+import ListCart from "./ListCart";
 
 function NavLinks() {
   const location = useLocation();
@@ -36,15 +37,7 @@ function NavLinks() {
       >
         About
       </Link>
-      <Link
-        className={`relative border-b-2 py-2 transition-all duration-300 ease-in-out ${pathMatchRoute("/cart") ? "border-b-indigo-600" : "border-b-transparent"}`}
-        to="/cart"
-      >
-        <span className="text-500-300 absolute left-[-1px] top-[-12px] rounded-full bg-pink-300 px-[3px] text-[14px] font-semibold">
-          {totalItems || ""}
-        </span>
-        {totalItems ? <HiShoppingCart /> : "Cart"}
-      </Link>
+      <ListCart />
     </div>
   );
 }
