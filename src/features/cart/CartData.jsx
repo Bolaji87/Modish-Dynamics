@@ -23,7 +23,7 @@ export default function CartData() {
       {!cart?.length ? (
         <div className="flex h-96 items-center justify-center">
           <h1 className="text-2xl font-semibold text-gray-600 dark:text-gray-50">
-            Your cart is empty
+            Your cart 🛒 is empty
           </h1>
         </div>
       ) : (

@@ -4,13 +4,10 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { useLocation, useNavigate } from "react-router-dom";
 import { selectCartCount } from "../features/cart/cartSlice";
-import { useToggleHamburger } from "../hooks/useToggleHamburger";
 
 function NavLinks() {
   const location = useLocation();
   const totalItems = useSelector(selectCartCount);
-
-  const { toggleShowMenu } = useToggleHamburger();
 
   function pathMatchRoute(path) {
     if (location.pathname === path) {

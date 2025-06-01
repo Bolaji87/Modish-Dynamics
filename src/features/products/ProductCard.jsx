@@ -26,7 +26,7 @@ function ProductCard({ product }) {
     <li className="flex h-[400px] flex-col rounded-md bg-gray-100 py-2 pt-0 dark:bg-gray-400">
       <div className="h-[80%] w-64 flex-1">
         <img
-          className="h-full w-full object-cover object-center dark:brightness-75"
+          className="h-full w-full max-w-[256px] object-cover object-center sm:max-w-[300px] md:max-w-[400px] dark:brightness-75"
           src={image}
           alt={name}
         />
