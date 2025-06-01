@@ -3,7 +3,7 @@ import Button from "../../UI/Button";
 
 function Newsletter() {
   return (
-    <form className="w-full bg-gray-50 px-4 py-10 sm:px-8 md:px-16 lg:px-20">
+    <form className="w-full bg-gray-50 px-4 py-10 sm:px-8 md:px-16 lg:px-20 dark:bg-gray-900 dark:text-gray-50">
       <div className="mx-auto flex max-w-4xl flex-col items-center justify-center gap-6 text-center">
         <h1 className="text-2xl font-bold text-indigo-600 sm:text-3xl md:text-4xl">
           Subscribe to our newsletter

@@ -4,13 +4,13 @@ import OAuth from "../UI/OAuth";
 
 function ForgotPassword() {
   return (
-    <section className="flex min-h-screen flex-col bg-gray-100 px-4 py-10 sm:px-6 lg:px-8">
+    <section className="flex min-h-screen flex-col bg-gray-100 px-4 py-10 sm:px-6 lg:px-8 dark:bg-gray-900">
       <h1 className="text-center text-xl font-semibold sm:text-2xl">
         Forgot Password
       </h1>
 
       <div className="mx-auto flex w-full max-w-md items-center justify-center py-8 sm:max-w-lg lg:max-w-xl">
-        <div className="w-full rounded-md bg-white px-6 py-8 shadow-md">
+        <div className="w-full rounded-md bg-white px-6 py-8 shadow-md dark:bg-gray-300">
           <form className="flex flex-col gap-4">
             <input
               type="email"
@@ -19,7 +19,7 @@ function ForgotPassword() {
             />
 
             <div className="flex flex-col text-sm sm:flex-row sm:items-center sm:justify-between sm:text-base">
-              <p className="mb-2 sm:mb-0">
+              <p className="mb-2 sm:mb-0 dark:text-stone-600">
                 Don&apos;t have an account?{" "}
                 <Link to="/sign-up" className="text-red-600 hover:underline">
                   Register

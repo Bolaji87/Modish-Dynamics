@@ -23,16 +23,18 @@ function ProductCard({ product }) {
   }
 
   return (
-    <li className="flex h-[400px] flex-col rounded-md bg-gray-100 py-2 pt-0">
+    <li className="flex h-[400px] flex-col rounded-md bg-gray-100 py-2 pt-0 dark:bg-gray-400">
       <div className="h-[80%] w-64 flex-1">
         <img
-          className="h-full w-full object-cover object-center"
+          className="h-full w-full object-cover object-center dark:brightness-75"
           src={image}
           alt={name}
         />
       </div>
       <div className="flex flex-col p-3 pb-0.5">
-        <p className="mb-2 text-sm font-bold text-gray-500">{name}</p>
+        <p className="mb-2 text-sm font-bold text-gray-500 dark:text-gray-200">
+          {name}
+        </p>
         <div className="flex items-center justify-between">
           <span className="font-bold text-stone-900"> #{price}</span>
           <Button

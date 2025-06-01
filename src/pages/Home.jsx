@@ -6,7 +6,7 @@ import Footer from "../UI/Footer";
 
 function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-[100dvh]">
       <Hero />
       <LatestProducts />
       <Newsletter />

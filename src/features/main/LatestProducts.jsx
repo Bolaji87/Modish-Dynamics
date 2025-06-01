@@ -26,7 +26,7 @@ const latestProducts = [
 
 function LatestProducts() {
   return (
-    <section className="min-h-screen bg-gray-50 py-10">
+    <section className="min-h-screen bg-gray-50 py-10 dark:bg-gray-900 dark:text-gray-50">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-8 md:px-12 lg:px-20">
         <h1 className="mb-10 text-center text-3xl font-bold capitalize text-indigo-600">
           Latest Products
@@ -54,7 +54,7 @@ function Latest({ item }) {
         <img
           src={image}
           alt={name}
-          className="h-full w-full object-cover object-center"
+          className="h-full w-full object-cover object-center dark:brightness-75"
         />
         <p className="absolute left-3 top-3 max-w-[90%] rounded bg-white/70 px-2 py-1 text-sm font-semibold italic text-stone-900 backdrop-blur-sm sm:text-base">
           {name}

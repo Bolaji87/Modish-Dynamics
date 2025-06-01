@@ -11,13 +11,13 @@ function SignUp() {
   }
 
   return (
-    <section className="flex min-h-screen flex-col bg-gray-100 px-4 sm:px-6 lg:px-8">
+    <section className="flex min-h-screen flex-col bg-gray-100 px-4 sm:px-6 lg:px-8 dark:bg-stone-900">
       <h1 className="mt-6 text-center text-xl font-semibold sm:text-2xl">
         Sign Up
       </h1>
 
       <div className="mx-auto flex w-full max-w-6xl items-center justify-center py-8 sm:max-w-lg lg:max-w-xl">
-        <div className="w-full rounded-md bg-white px-6 py-8 shadow-md">
+        <div className="w-full rounded-md bg-white px-6 py-8 shadow-md dark:bg-gray-300">
           <form className="flex flex-col gap-4">
             <input
               type="text"
@@ -50,7 +50,7 @@ function SignUp() {
             </div>
 
             <div className="flex flex-col text-sm sm:flex-row sm:items-center sm:justify-between sm:text-base">
-              <p className="mb-2 sm:mb-0">
+              <p className="mb-2 sm:mb-0 dark:text-stone-600">
                 Already have an account?{" "}
                 <Link className="text-red-600 hover:underline" to="/sign-in">
                   Sign in

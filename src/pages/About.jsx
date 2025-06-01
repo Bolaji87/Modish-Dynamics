@@ -9,10 +9,9 @@ function About() {
   });
 
   return (
-    <section className="min-h-screen bg-white text-gray-800">
-      {/* Hero/Banner Image */}
+    <section className="min-h-screen bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-50">
       <div
-        className="mb-10 h-[50vh] w-full bg-cover bg-center"
+        className="mb-10 h-[50vh] w-full bg-cover bg-center dark:brightness-75"
         style={{ backgroundImage: "url('/bundle-yard-here.webp')" }}
       >
         <div className="flex h-full w-full items-center justify-center bg-black bg-opacity-40">
@@ -24,10 +23,12 @@ function About() {
 
       <div className="mx-auto max-w-5xl px-4 sm:px-8 lg:px-16">
         {/* Intro Paragraph */}
-        <p className="mb-8 text-lg leading-relaxed text-gray-600">
+        <p className="mb-8 text-lg leading-relaxed text-gray-600 dark:text-gray-50">
           Welcome to{" "}
-          <span className="font-semibold text-gray-800">{BRAND_NAME}</span> —
-          Where Modesty Meets Modernity.
+          <span className="font-semibold text-gray-800 dark:text-gray-300">
+            {BRAND_NAME}
+          </span>{" "}
+          — Where Modesty Meets Modernity.
         </p>
 
         <p>
@@ -40,15 +41,15 @@ function About() {
         </p>
 
         {/* Our Story Section */}
-        <div className="my-12 grid items-center gap-6 lg:grid-cols-2">
+        <div className="my-12 grid items-center gap-6 lg:grid-cols-2 dark:text-gray-50">
           <img
             src="/f-8.png"
             alt="Our story"
-            className="h-64 w-full rounded-xl object-cover shadow"
+            className="h-64 w-full rounded-xl object-cover shadow dark:brightness-75"
           />
           <div>
             <h2 className="mb-3 text-2xl font-semibold">Our Story</h2>
-            <p className="leading-relaxed text-gray-600">
+            <p className="leading-relaxed">
               Established in {formatted},{" "}
               <em className="font-semibold">{BRAND_NAME}</em> was founded with a
               vision to redefine modest fashion through elegant, purposeful
@@ -63,7 +64,7 @@ function About() {
         {/* Our Commitment Section */}
         <div className="mb-10">
           <h2 className="mb-3 text-2xl font-semibold">Our Commitment</h2>
-          <ul className="list-inside list-disc leading-relaxed text-gray-600">
+          <ul className="list-inside list-disc leading-relaxed">
             <li>Designs that honor modest values with modern elegance</li>
             <li>Quality Abayas and Jalabs made with precision and care</li>
             <li>
@@ -76,7 +77,7 @@ function About() {
 
         {/* Closing Message */}
         <div className="mt-10">
-          <p className="text-lg text-gray-700">
+          <p className="text-lg text-stone-700 dark:text-gray-50">
             Thank you for being part of{" "}
             <span className="font-semibold">{BRAND_NAME}</span>. Join a
             community that celebrates modest fashion without limits — grounded

@@ -19,10 +19,10 @@ export default function CartData() {
   const navigate = useNavigate();
 
   return (
-    <section className="mx-auto min-h-screen w-full max-w-7xl bg-white px-6 py-10">
+    <section className="mx-auto min-h-screen w-full max-w-7xl rounded bg-gray-50 px-6 py-10 dark:rounded dark:bg-gray-700">
       {!cart?.length ? (
         <div className="flex h-96 items-center justify-center">
-          <h1 className="text-2xl font-semibold text-gray-600">
+          <h1 className="text-2xl font-semibold text-gray-600 dark:text-gray-50">
             Your cart is empty
           </h1>
         </div>
@@ -35,7 +35,7 @@ export default function CartData() {
           </ul>
 
           {/* Cart Summary */}
-          <div className="flex h-full w-full flex-col justify-between rounded-lg bg-gray-100 p-6 shadow-lg lg:w-1/3">
+          <div className="flex h-full w-full flex-col justify-between rounded-lg bg-gray-100 p-6 shadow-lg lg:w-1/3 dark:bg-gray-300">
             <section className="space-y-4">
               <h2 className="border-b pb-2 text-2xl font-semibold text-gray-800">
                 Cart Summary
