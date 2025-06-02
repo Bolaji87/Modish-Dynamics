@@ -1,18 +1,16 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 
+import Logo from "./Logo";
 import NavLinks from "./NavLinks";
 import Button from "./Button";
-import { HiMiniXMark, HiOutlineBars4 } from "react-icons/hi2";
-import { useToggleModal } from "../hooks/useToggleModal";
 import NavModal from "./NavModal";
-import ToggleDarkMode from "./ToggleDarkMode";
-import HamburgerMenu from "./HamburgerMenu";
 import ListCart from "./ListCart";
+import HamburgerMenu from "./HamburgerMenu";
+import ToggleDarkMode from "./ToggleDarkMode";
+
+import { useToggleModal } from "../hooks/useToggleModal";
 import { useSelector } from "react-redux";
 import { selectCartCount } from "../features/cart/cartSlice";
-import Logo from "./Logo";
-import { div } from "framer-motion/client";
 
 function Header() {
   const totalItems = useSelector(selectCartCount);
@@ -34,11 +32,15 @@ function Header() {
         >
           <HamburgerMenu toggleMenu={toggleShowModalMenu} />
           {totalItems ? (
-            <div className="absolute right-[-10px] top-1 text-xs">
+            <div
+              onClick={onToggleModal}
+              className="absolute right-[-10px] top-1 text-xs"
+            >
               <ListCart />
             </div>
           ) : null}
         </div>
+
         <ToggleDarkMode />
 
         <div className="absolute right-[-20px] top-[58px]">
