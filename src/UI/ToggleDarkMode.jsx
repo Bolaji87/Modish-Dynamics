@@ -8,7 +8,7 @@ function ToggleDarkMode() {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   return (
-    <Button onclick={toggleDarkMode} className="hidden p-2 text-xl sm:block">
+    <Button onclick={toggleDarkMode} className="block p-2 text-xl">
       <AnimatePresence mode="wait">
         {isDarkMode ? (
           <motion.span

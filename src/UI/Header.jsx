@@ -2,7 +2,6 @@ import React from "react";
 
 import Logo from "./Logo";
 import NavLinks from "./NavLinks";
-import Button from "./Button";
 import NavModal from "./NavModal";
 import ListCart from "./ListCart";
 import HamburgerMenu from "./HamburgerMenu";
@@ -16,32 +15,26 @@ function Header() {
   const totalItems = useSelector(selectCartCount);
   const { onToggleModal, toggleShowModalMenu } = useToggleModal();
   return (
-    <header className="max-7xl sticky top-0 z-50 m-auto flex w-full items-center justify-between gap-5 bg-gray-50 px-8 py-3 text-sm font-medium text-stone-700 shadow-md sm:font-semibold dark:bg-gray-600 dark:text-gray-50">
+    <header className="max-7xl sticky top-0 z-50 m-auto flex w-full items-center justify-between gap-5 bg-gray-50 px-8 py-3 text-sm font-medium text-stone-700 shadow-md dark:bg-gray-600 dark:text-gray-50 sm:font-semibold">
       <Logo />
       <nav className="relative flex items-center gap-2">
         <NavLinks />
-        <Button
-          className="w-max rounded-md bg-indigo-600 px-4 py-2 text-sm text-white transition hover:bg-indigo-700 sm:px-6 sm:text-base"
-          to="/sign-in"
-        >
-          Sign In
-        </Button>
+
+        <ToggleDarkMode />
         <div
           onClick={onToggleModal}
           className="relative block px-1 py-1 text-4xl font-semibold sm:hidden"
         >
           <HamburgerMenu toggleMenu={toggleShowModalMenu} />
-          {totalItems ? (
+          {totalItems > 0 && (
             <div
               onClick={onToggleModal}
               className="absolute right-[-10px] top-1 text-xs"
             >
               <ListCart />
             </div>
-          ) : null}
+          )}
         </div>
-
-        <ToggleDarkMode />
 
         <div className="absolute right-[-20px] top-[58px]">
           {toggleShowModalMenu && <NavModal closeModal={onToggleModal} />}

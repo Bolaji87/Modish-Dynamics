@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useLocation, useNavigate } from "react-router-dom";
 import { selectCartCount } from "../features/cart/cartSlice";
 import ListCart from "./ListCart";
+import Button from "./Button";
 
 function NavLinks() {
   const location = useLocation();
@@ -38,6 +39,12 @@ function NavLinks() {
         About
       </Link>
       <ListCart />
+      <Button
+        className="w-max rounded-md bg-indigo-600 px-4 py-2 text-sm text-white transition hover:bg-indigo-700 sm:px-6 sm:text-base"
+        to="/sign-in"
+      >
+        Sign In
+      </Button>
     </div>
   );
 }
