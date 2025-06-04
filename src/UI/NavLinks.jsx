@@ -1,15 +1,11 @@
 import React from "react";
-import { HiShoppingCart } from "react-icons/hi2";
-import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { useLocation, useNavigate } from "react-router-dom";
-import { selectCartCount } from "../features/cart/cartSlice";
+import { useLocation } from "react-router-dom";
 import ListCart from "./ListCart";
 import Button from "./Button";
 
 function NavLinks() {
   const location = useLocation();
-  const totalItems = useSelector(selectCartCount);
 
   function pathMatchRoute(path) {
     if (location.pathname === path) {
