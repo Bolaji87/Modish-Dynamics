@@ -23,7 +23,7 @@ export default function Checkout() {
             ✅ <strong>{totalItems}</strong> items in your cart
           </p>
           <p className="text-lg text-gray-700">
-            💰 Total: <strong>${totalAmount.toFixed(2)}</strong>
+            💰 Total: <strong>#{totalAmount.toFixed(2)}</strong>
           </p>
 
           <p className="text-gray-600">

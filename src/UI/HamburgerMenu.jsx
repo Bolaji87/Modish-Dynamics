@@ -6,9 +6,9 @@ function HamburgerMenu({ toggleMenu }) {
     <>
       {/* <div className="absolute right-[-15px] top-0 text-xs">{children}</div> */}
       {toggleMenu ? (
-        <HiMiniXMark className="h-full text-indigo-600 dark:text-indigo-400" />
+        <HiMiniXMark className="h-full text-indigo-600 dark:text-gray-50" />
       ) : (
-        <HiOutlineBars4 className="h-full text-indigo-600 dark:text-indigo-400" />
+        <HiOutlineBars4 className="h-full text-indigo-600 dark:text-gray-50" />
       )}
     </>
   );

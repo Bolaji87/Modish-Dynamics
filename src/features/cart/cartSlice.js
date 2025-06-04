@@ -92,10 +92,12 @@ const cartSlice = createSlice({
       if (item && item.quantity > 1) {
         item.quantity--;
         item.totalAmount = item.price * item.quantity;
-      } else if (item && item.quantity === 1) {
-        // Optional: remove item if quantity hits 0
-        state.cart = state.cart.filter((i) => i.id !== action.payload);
       }
+
+      // else if (item && item.quantity === 1) {
+      //   // Optional: remove item if quantity hits 0
+      //   state.cart = state.cart.filter((i) => i.id !== action.payload);
+      // }
     },
 
     clearCart(state) {

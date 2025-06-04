@@ -8,7 +8,7 @@ function ToggleDarkMode() {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   return (
-    <Button onclick={toggleDarkMode} className="block p-2 text-xl">
+    <Button onclick={toggleDarkMode} className="block p-2 text-2xl">
       <AnimatePresence mode="wait">
         {isDarkMode ? (
           <motion.span
@@ -18,7 +18,7 @@ function ToggleDarkMode() {
             exit={{ opacity: 0, rotate: 90 }}
             transition={{ duration: 0.2 }}
           >
-            <HiOutlineSun className="text-indigo-600" />
+            <HiOutlineSun className="dark:text- font-bold text-indigo-600 dark:text-gray-50" />
           </motion.span>
         ) : (
           <motion.span
@@ -28,7 +28,7 @@ function ToggleDarkMode() {
             exit={{ opacity: 0, rotate: 90 }}
             transition={{ duration: 0.2 }}
           >
-            <HiOutlineMoon className="text-indigo-600" />
+            <HiOutlineMoon className="font-bold text-indigo-600 dark:text-gray-50" />
           </motion.span>
         )}
       </AnimatePresence>

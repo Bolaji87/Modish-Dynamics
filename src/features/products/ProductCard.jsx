@@ -2,7 +2,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { addCartItem } from "../cart/cartSlice";
-import Button from "../../UI/Button";
+import Button from "../../ui/Button";
 
 function ProductCard({ product }) {
   const dispatch = useDispatch();
@@ -24,15 +24,9 @@ function ProductCard({ product }) {
 
   return (
     <li className="flex h-[400px] flex-col rounded-md bg-gray-100 py-2 pt-0 dark:bg-gray-400">
-      <div className="h-[80%] w-64 flex-1">
-        {/* <img
-          className="h-full w-full max-w-[256px] object-cover object-center sm:max-w-[300px] md:max-w-[400px] dark:brightness-75"
-          src={image}
-          alt={name}
-        /> */}
-
+      <div className="h-[80%] w-full flex-1">
         <img
-          className="h-full w-full max-w-full object-cover object-center dark:brightness-75 sm:max-w-[300px] md:max-w-[400px]"
+          className="h-full w-full max-w-full object-cover object-top dark:brightness-75 sm:max-w-[300px] md:max-w-[400px]"
           src={image}
           alt={name}
         />

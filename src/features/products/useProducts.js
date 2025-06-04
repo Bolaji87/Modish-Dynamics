@@ -10,5 +10,5 @@ export function useProducts() {
     queryKey: ["products"],
     queryFn: getProducts,
   });
-  return { isLoading, products };
+  return { isLoading, products, error };
 }

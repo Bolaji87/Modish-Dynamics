@@ -38,9 +38,10 @@
 import { useProducts } from "./useProducts";
 import ProductCard from "./ProductCard";
 import Loader from "../../UI/Loader";
+import Error from "../../UI/Error";
 
 function ProductsData() {
-  const { isLoading, products } = useProducts();
+  const { isLoading, products, error } = useProducts();
 
   if (isLoading)
     return (
@@ -48,6 +49,7 @@ function ProductsData() {
         <Loader />
       </div>
     );
+  if (error) return <Error error={error} />;
 
   return (
     <div className="px-4 py-10">

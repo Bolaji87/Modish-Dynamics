@@ -5,10 +5,10 @@ export default function Logo() {
   return (
     <Link
       to="/"
-      className="flex w-max max-w-fit items-center gap-2 text-xs font-bold capitalize text-indigo-600 dark:text-indigo-400 sm:text-xl"
+      className="flex w-max max-w-fit items-center gap-2 text-xs font-bold capitalize text-indigo-600 dark:text-indigo-800 sm:text-xl"
     >
       <img
-        className="h-6 w-6 rounded-full bg-indigo-600 object-cover object-center text-2xl font-bold text-indigo-600"
+        className="text-indigo-6800 h-7 w-7 rounded-full bg-indigo-800 object-cover object-center text-2xl font-bold"
         src="./logo.png"
         alt="logo"
       />{" "}
