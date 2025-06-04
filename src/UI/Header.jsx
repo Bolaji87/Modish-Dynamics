@@ -26,7 +26,7 @@ function Header() {
           className="relative block px-1 py-1 text-4xl font-semibold sm:hidden"
         >
           <HamburgerMenu toggleMenu={toggleShowModalMenu} />
-          {totalItems > 0 && (
+          {!!totalItems > 0 && (
             <div
               onClick={onToggleModal}
               className="absolute right-[-10px] top-1 text-xs"
