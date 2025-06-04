@@ -2,7 +2,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { addCartItem } from "../cart/cartSlice";
-import Button from "../../ui/Button";
+import Button from "../../UI/Button";
 
 function ProductCard({ product }) {
   const dispatch = useDispatch();
