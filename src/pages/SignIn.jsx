@@ -11,7 +11,7 @@ function SignIn() {
   }
 
   return (
-    <section className="flex min-h-screen flex-col bg-gray-100 px-4 sm:px-6 lg:px-8 dark:bg-gray-900">
+    <section className="flex min-h-screen flex-col bg-gray-100 px-4 dark:bg-gray-900 sm:px-6 lg:px-8">
       <h1 className="mt-6 text-center text-xl font-semibold sm:text-2xl">
         Sign In
       </h1>
@@ -27,17 +27,17 @@ function SignIn() {
 
             <div className="relative">
               <input
-                type={showPassword ? "text" : "password"}
+                type={showPassword ? "password" : "text"}
                 placeholder="Password"
                 className="w-full rounded border border-gray-300 px-4 py-2 text-base text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               {showPassword ? (
-                <AiFillEyeInvisible
+                <AiFillEye
                   className="absolute right-3 top-3 cursor-pointer text-xl text-gray-600"
                   onClick={handleShowPassword}
                 />
               ) : (
-                <AiFillEye
+                <AiFillEyeInvisible
                   className="absolute right-3 top-3 cursor-pointer text-xl text-gray-600"
                   onClick={handleShowPassword}
                 />
@@ -45,7 +45,7 @@ function SignIn() {
             </div>
 
             <div className="flex flex-col text-sm sm:flex-row sm:items-center sm:justify-between sm:text-base">
-              <p className="mb-2 sm:mb-0 dark:text-stone-600">
+              <p className="mb-2 dark:text-stone-600 sm:mb-0">
                 Don&apos;t have an account?{" "}
                 <Link className="text-red-600 hover:underline" to="/sign-up">
                   Register
